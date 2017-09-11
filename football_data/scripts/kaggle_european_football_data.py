@@ -4,7 +4,6 @@ from football_data.constants import KAGGLE_POSTGRES_SCHEMA, KAGGLE_SQLITE_DB_PAT
 from football_data.db_engines import connect_sqlite, connect_postgres
 
 import logging
-logging.basicConfig(filename=__name__)
 
 
 def update():
@@ -31,6 +30,7 @@ def copy_to_postgres(source_con, source_table, destination_con, destination_tabl
     df = pd.read_sql('select * from %s;' % source_table, source_con)
     logging.debug('writing %s to %s with schema = %s' % (str(df.head()), destination_table, destination_schema))
     df.to_sql(destination_table, destination_con, index=False, schema=destination_schema)
+    return df
 
 
 if __name__ == '__main__':

@@ -2,7 +2,6 @@ from sqlalchemy.engine import create_engine
 from football_data.constants import POSTGRES_DB, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_USER, POSTGRES_PWD
 
 import logging
-logging.basicConfig(filename=__name__)
 
 
 def connect_postgres(db=None):

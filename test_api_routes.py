@@ -24,12 +24,13 @@ routes = ['/v1/competitions/?season=2015',
           '/v1/competitions/445/teams',
           '/v1/teams/397',
           '/v1/competitions/445/leagueTable/?matchday=1',
-          '/v1/competitions/445/fixtures',
-          '/v1/teams/57/players'
+          '/v1/competitions/445/fixtures'
           ]
 
-for route in routes:
-    get_flat_result(route)
+if __name__ == '__main__':
+    routes = ['/v1/teams/57/players/?season=2015']
+    for route in routes:
+        print(get_flat_result(route))
 
 
 

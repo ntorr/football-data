@@ -1,6 +1,5 @@
 import os
 import logging
-logging.basicConfig(filename=__name__)
 
 # path constants
 CONST_FILE_PATH = os.path.abspath(__file__)
