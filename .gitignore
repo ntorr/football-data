@@ -1,0 +1,16 @@
+.soccer-api-key
+.postgres-pwd
+__pycache__
+
+# ignore data for now
+data
+
+# JetBrains IDE stuff
+.idea
+
+# only keep saved notebook code
+notebooks/.ipynb_checkpoints
+notebooks/*.constants
+
+# ignore install files
+football_data.egg-info
